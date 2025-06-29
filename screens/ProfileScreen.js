@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, ScrollView ,SafeAreaView} from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView ,Pressable} from 'react-native';
 import { useLayoutEffect } from 'react';
 import { mockUser } from '../data/mockData';
 
@@ -33,9 +33,9 @@ function ProfileScreen({ navigation }) {
         <Text style={styles.value}>{mockUser.joinDate}</Text>
       </View>
 
-      <View style={styles.logoutButton}>
+      <Pressable style={styles.logoutButton}>
         <Text style={styles.logoutText}>🚪 Logout</Text>
-      </View>
+      </Pressable>
     
     
     </ScrollView>
@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     backgroundColor: '#5e3928',
     borderRadius: 8,
+    
   },
   logoutText: {
     color: 'white',
